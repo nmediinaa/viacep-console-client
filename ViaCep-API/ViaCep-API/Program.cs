@@ -11,6 +11,7 @@ using (HttpClient client = new HttpClient())
         Dictionary<int, IMenu> menus = new Dictionary<int, IMenu>();
         menus.Add(1, new MenuBuscaCep());
         menus.Add(2, new MenuHistorico());
+        menus.Add(3, new MenuSair());
         
         Menu menuIndex = new();
         while (true)
@@ -41,7 +42,9 @@ using (HttpClient client = new HttpClient())
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Digite uma opção valida!");
+                Thread.Sleep(2000);
             }
         }
     }

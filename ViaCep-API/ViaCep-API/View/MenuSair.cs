@@ -2,9 +2,9 @@
 
 namespace ViaCep_API.View;
 
-public class Menu : IMenu
+public class MenuSair : IMenu
 {
-    public  void ExibirHeader()
+    public void ExibirHeader()
     {
         string titulo = "BUSCA BUSCA - API";
         int qntdLetras = titulo.Length;
@@ -19,11 +19,7 @@ public class Menu : IMenu
 
     public void ExibirMenu()
     {
-        Console.WriteLine("1 - Bucar endereço pelo CEP");
-        Console.WriteLine("2 - Histórico de pesquisa");
-        Console.WriteLine("3 - Sair");
-        Console.WriteLine("");
-        Console.WriteLine("Digite sua opção:");
-        Console.Write(">>");
+        Console.WriteLine("Saindo...");
+        Environment.Exit(0);
     }
 }
