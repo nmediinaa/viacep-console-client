@@ -20,12 +20,8 @@ public class MenuBuscaCep : IMenu
         Console.WriteLine();
     }
 
-    public void Executar()
-    {
-        throw new NotImplementedException();
-    }
-
-
+    
+    
     public void ExibirMenu()
     {
         Console.WriteLine("> Digite um CEP(Sem ponto e sem traços):");

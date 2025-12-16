@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using ViaCep_API;
 using ViaCep_API.Interface;
 using ViaCep_API.Models;
 using ViaCep_API.View;
@@ -14,6 +15,7 @@ using (HttpClient client = new HttpClient())
         menus.Add(3, new MenuSair());
         
         Menu menuIndex = new();
+        EscritorDeArquivo writer = new EscritorDeArquivo();
         while (true)
         {
             menuIndex.ExibirHeader();
@@ -29,8 +31,8 @@ using (HttpClient client = new HttpClient())
                 Console.Clear();
                 string response = await client.GetStringAsync($"https://viacep.com.br/ws" +
                                                               $"/{cepEscolhido}/json/");
-        
                 var cep = JsonSerializer.Deserialize<Endereco>(response)!;
+                writer.WriterFile(cep);
                 cep.Exibir();
                 Thread.Sleep(2000);
                 Console.Clear();
