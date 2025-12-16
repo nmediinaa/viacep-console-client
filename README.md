@@ -13,6 +13,7 @@ O foco principal deste desenvolvimento foi aprofundar os conhecimentos adquirido
 * **Consumo de APIs:** Utilizando `HttpClient` para fazer requisições externas.
 * **Manipulação de Dados:** Deserialização de objetos JSON.
 * **Programação Assíncrona:** Uso básico de `async` e `await`.
+* **Manipulação de arquivos:** Uso das classes como `FilesStream`, `StreamReader` e `StreamWriter` .
 
 ---
 
